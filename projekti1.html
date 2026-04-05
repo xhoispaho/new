@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Love</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        
+        .navbar {
+            padding: 15px 40px;
+        }
+
+        .navbar-brand {
+            color: #ffd700 !important;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        
+
+        
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        
+        .carousel-item::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+        }
+        
+
+
+        
+        .carousel-caption {
+            bottom: 40%;
+            left: 5%;
+            right: auto;
+            text-align: left;
+        }
+
+        .carousel-caption h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .carousel-caption p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+    <a class="navbar-brand" href="#">Movie love</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Tv Show</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Movie</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Upcoming</a></li>
+        </ul>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <input type="text" class="form-control mr-2" placeholder="Search movie">
+        <img src="https://i.pravatar.cc/40" class="profile-img" alt="profile">
+    </div>
+
+</nav>
+
+
+<div id="movieCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+       
+
+        
+        <div class="carousel-item active" style="background-image: url('raya.jpg');">
+            <div class="carousel-caption">
+                <h1>RAYA AND THE LAST DRAGON</h1>
+                <p>A quest to save the world.</p>
+            </div>
+        </div>
+
+        
+        <div class="carousel-item" style="background-image: url('moana.png');">
+            <div class="carousel-caption">
+                <h1>MOANA</h1>
+                <p>There comes a day when you're gonna look around and realize happiness is where you are.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    <a class="carousel-control-prev" href="#movieCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#movieCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
