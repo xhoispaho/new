@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Love</title>
 
-    <!-- Bootstrap -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Font Awesome -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -84,6 +84,68 @@
         .carousel-caption p {
             font-size: 20px;
         }
+
+        
+
+
+    .movie-scroll {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .movie-scroll::-webkit-scrollbar {
+    display: none;
+    }
+
+    .movie-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+
+    .movie-item {
+    min-width: 150px;
+    margin-right: 15px;
+    flex: 0 0 auto; /* siguron që nuk tkurret */
+    }
+
+    .movie-item .card {
+    background-color: #111;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    } 
+
+    .movie-item img {
+    width: 150px;      /* i uniformon madhësinë */
+    height: 220px;     
+    object-fit: cover;   
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    }  
+
+    .movie-item .card:hover {
+    transform: scale(1.05);
+    }
+
+    .movie-item .card-body {
+    padding: 8px;
+    }
+
+    .movie-item .card-title {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    }
+
+    .movie-item p {
+    font-size: 0.7rem;
+    color: #aaa;
+    margin: 0;
+    }
+
     </style>
 </head>
 
@@ -121,7 +183,7 @@
        
 
         
-        <div class="carousel-item active" style="background-image: url('raya.jpg');">
+        <div class="carousel-item active" style="background-image: url('images/raya.jpg');">
             <div class="carousel-caption">
                 <h1>RAYA AND THE LAST DRAGON</h1>
                 <p>A quest to save the world.</p>
@@ -129,7 +191,7 @@
         </div>
 
         
-        <div class="carousel-item" style="background-image: url('moana.png');">
+        <div class="carousel-item" style="background-image: url('images/moana.png');">
             <div class="carousel-caption">
                 <h1>MOANA</h1>
                 <p>There comes a day when you're gonna look around and realize happiness is where you are.</p>
@@ -147,6 +209,98 @@
     <a class="carousel-control-next" href="#movieCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
+
+</div>
+
+
+<div class="movie-scroll mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="text-white">Most Viewed</h4>
+        <a href="#" class="text-light">View all →</a>
+    </div>
+
+    
+    <div class="d-flex overflow-auto flex-nowrap">  
+
+        
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/mavka.png" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Mavka</h6>
+                    <p class="text-muted small mb-0">(2023) Mar 03</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/Jack_Ryan.png" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Jack Ryan</h6>
+                    <p class="text-muted small mb-0">Season 1-4</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/boss_baby.jpg" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Boss Baby</h6>
+                    <p class="text-muted small mb-0">Season 1-2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/bird_box.jpg" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Bird Box Barcelona</h6>
+                    <p class="text-muted small mb-0">Jul 14, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/Day_Shift_.jpg" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Day Shift</h6>
+                    <p class="text-muted small mb-0">Aug 17, 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/sonic.jpg" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Sonic The Hedgehog</h6>
+                    <p class="text-muted small mb-0">2020</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="card bg-dark text-white border-0">
+                <img src="images/blade_runner.jpg" class="card-img-top">
+                <div class="card-body p-2">
+                    <h6 class="card-title">Blade Runner</h6>
+                    <p class="text-muted small mb-0">2017</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        
+    </div>
 
 </div>
 
