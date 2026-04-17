@@ -91,10 +91,9 @@
     .movie-scroll {
     display: flex;
     overflow-x: auto;
-    flex-wrap: nowrap;
     scroll-behavior: smooth;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
+    gap: 15px;
     }
 
     .movie-scroll::-webkit-scrollbar {
@@ -107,9 +106,8 @@
     }
 
     .movie-item {
-    min-width: 150px;
     margin-right: 15px;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
     }
 
     .movie-item .card {
@@ -120,11 +118,11 @@
     } 
 
     .movie-item img {
-    width: 150px;      
+    width: 100%;      
     height: 220px;     
     object-fit: cover;   
     border-radius: 10px;
-    transition: transform 0.4s ease;
+    
     }  
 
     .movie-item .card:hover {
@@ -146,47 +144,21 @@
     margin: 0;
     }
 
-    
-@media (max-width: 768px) {
-
-    
-    .navbar {
-        padding: 10px 15px;
-    }
-
-    
-    .navbar .form-control {
-        width: 120px;
-    }
-
-
-    .carousel-item {
-        height: 60vh;
-    }
-
-    
-    .carousel-caption {
-        bottom: 20%;
-    }
-
-    .carousel-caption h1 {
-        font-size: 24px;
-    }
-
-    .carousel-caption p {
-        font-size: 14px;
-    }
-
-    
-    .movie-item {
-        min-width: 120px;
-    }
-
-    .movie-item img {
-        width: 120px;
-        height: 180px;
-    }
+    @media (max-width: 576px) {
+    .movie-item { width: 140px; }
 }
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .movie-item { width: 150px; }
+}
+
+@media (min-width: 993px) {
+    .movie-item { width: 160px; }
+}
+
+
+
+
 
     </style>
 </head>
@@ -262,85 +234,86 @@
     </div>
 </div>
 
-<div class="movie-scroll">
-    
+<div class="container mt-4">
 
-    
-    <div class="d-flex overflow-auto flex-nowrap">  
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="text-white">Most Viewed</h4>
+  </div>
 
-        
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/mavka.png" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Mavka</h6>
-                    <p class="text-muted small mb-0">(2023) Mar 03</p>
-                </div>
-            </div>
+  <div class="movie-scroll d-flex">
+
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/mavka.png">
+        <div class="card-body p-2">
+          <h6 class="card-title">Mavka</h6>
+          <p class="text-muted small mb-0">(2023) Mar 03</p>
         </div>
+      </div>
+    </div>
 
-        
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/Jack_Ryan.png" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Jack Ryan</h6>
-                    <p class="text-muted small mb-0">Season 1-4</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/Jack_Ryan.png">
+        <div class="card-body p-2">
+          <h6 class="card-title">Jack Ryan</h6>
+          <p class="text-muted small mb-0">Season 1-4</p>
         </div>
+      </div>
+    </div>
 
-        
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/boss_baby.jpg" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Boss Baby</h6>
-                    <p class="text-muted small mb-0">Season 1-2</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/boss_baby.jpg">
+        <div class="card-body p-2">
+          <h6 class="card-title">Boss Baby</h6>
+          <p class="text-muted small mb-0">Season 1-2</p>
         </div>
+      </div>
+    </div>
 
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/bird_box.jpg" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Bird Box Barcelona</h6>
-                    <p class="text-muted small mb-0">Jul 14, 2025</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/bird_box.jpg">
+        <div class="card-body p-2">
+          <h6 class="card-title">Bird Box Barcelona</h6>
+          <p class="text-muted small mb-0">Jul 14, 2025</p>
         </div>
+      </div>
+    </div>
 
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/Day_Shift_.jpg" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Day Shift</h6>
-                    <p class="text-muted small mb-0">Aug 17, 2022</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/Day_Shift_.jpg">
+        <div class="card-body p-2">
+          <h6 class="card-title">Day Shift</h6>
+          <p class="text-muted small mb-0">Aug 17, 2022</p>
         </div>
+      </div>
+    </div>
 
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/sonic.jpg" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Sonic The Hedgehog</h6>
-                    <p class="text-muted small mb-0">2020</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/sonic.jpg">
+        <div class="card-body p-2">
+          <h6 class="card-title">Sonic The Hedgehog</h6>
+          <p class="text-muted small mb-0">2020</p>
         </div>
+      </div>
+    </div>
 
-        <div class="movie-item">
-            <div class="card bg-dark text-white border-0">
-                <img src="images/blade_runner.jpg" class="card-img-top">
-                <div class="card-body p-2">
-                    <h6 class="card-title">Blade Runner</h6>
-                    <p class="text-muted small mb-0">2017</p>
-                </div>
-            </div>
+    <div class="movie-item">
+      <div class="card bg-dark text-white border-0">
+        <img src="images/blade_runner.jpg">
+        <div class="card-body p-2">
+          <h6 class="card-title">Blade Runner</h6>
+          <p class="text-muted small mb-0">2017</p>
         </div>
+      </div>
+    </div>
 
+  </div>
+</div>
 
 
         
