@@ -1,369 +1,424 @@
 <!DOCTYPE html>
 <html lang="sq">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Love</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Love</title>
 
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-        }
+  <link rel="stylesheet" href="style.css">
 
-        
-        .navbar {
-            padding: 15px 40px;
-        }
-
-        .navbar-brand {
-            color: #ffd700 !important;
-            font-weight: bold;
-            font-size: 22px;
-        }
-
-        .nav-link {
-            color: white !important;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #ffd700 !important;
-        }
-
-        .profile-img {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-
-        
-
-        
-        .carousel-item {
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        
-        .carousel-item::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            top: 0;
-            left: 0;
-        }
-        
-
-
-        
-        .carousel-caption {
-            bottom: 40%;
-            left: 5%;
-            right: auto;
-            text-align: left;
-        }
-
-        .carousel-caption h1 {
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .carousel-caption p {
-            font-size: 20px;
-        }
-
-        
-
-
-    .movie-scroll {
-    display: flex;
-    scroll-behavior: smooth;
-    padding: 10px 15px;
-    gap: 15px;
-    }
-
-    .movie-scroll::-webkit-scrollbar {
-    display: none;
-    }
-
-    .movie-scroll {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    }
-
-    .movie-item {
-    margin-right: 15px;
-    flex: 0 0 auto;
-    }
-
-    .movie-item .card {
-    background-color: #111;
-    border: none;
-    color: white;
-    transition: transform 0.3s ease;
-    } 
-
-    .movie-item img {
-    width: 100%;      
-    height: 220px;     
-    object-fit: cover;   
-    border-radius: 10px;
-    
-    }  
-
-    .movie-item .card:hover {
-    transform: scale(1.05);
-    }
-
-    .movie-item .card-body {
-    padding: 8px;
-    }
-
-    .movie-item .card-title {
-    font-size: 0.85rem;
-    margin-bottom: 4px;
-    }
-
-    .movie-item p {
-    font-size: 0.7rem;
-    color: #aaa;
-    margin: 0;
-    }
-
-    @media (max-width: 576px) {
-    .movie-item { width: 140px; }
-}
-
-@media (min-width: 577px) and (max-width: 992px) {
-    .movie-item { width: 150px; }
-}
-
-@media (min-width: 993px) {
-    .movie-item { width: 160px; }
-}
-
-.carousel-item .row {
-    flex-wrap: nowrap;
-}
-
-.carousel-item {
-    padding: 20px 0;
-}
-
-.carousel img {
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Desktop */
-.carousel .col-lg-2 {
-    max-width: 20%;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    .carousel .col-md-4 {
-        max-width: 33.33%;
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-    .carousel .col-6 {
-        max-width: 50%;
-    }
-}
-
-
-
-
-    </style>
 </head>
 
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-  
-    
     <a class="navbar-brand" href="#">Movie love</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Tv Show</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Movie</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Upcoming</a></li>
-        </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tv Show</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Movie</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Upcoming</a></li>
+      </ul>
     </div>
 
     <div class="d-flex align-items-center">
-        <input type="text" class="form-control mr-2 w-50" placeholder="Search movie">
-        <img src="https://i.pravatar.cc/40" class="profile-img" alt="profile">
+      <input type="text" class="form-control mr-2 w-50" placeholder="Search movie">
+      <img src="https://i.pravatar.cc/40" class="profile-img" alt="profile">
     </div>
 
-    
 
-</nav>
+  </nav>
 
-<div id="mainCarousel" class="carousel slide" data-ride="carousel">
+  <div id="mainCarousel" class="carousel slide" data-ride="carousel">
 
-  <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    
-    <div class="carousel-item active" style="background-image: url('images/raya.jpg');">
-      <div class="carousel-caption">
-        <h1>RAYA AND THE LAST DRAGON</h1>
-        <p>A quest to save the world.</p>
+      <div class="carousel-item active" style="background-image: url('images/raya.jpg');">
+        <div class="carousel-caption">
+          <h1>RAYA AND THE LAST DRAGON</h1>
+          <p>A quest to save the world.</p>
+        </div>
       </div>
+
+      <div class="carousel-item" style="background-image: url('images/moana.png');">
+        <div class="carousel-caption">
+          <h1>MOANA</h1>
+          <p>An epic ocean adventure.</p>
+        </div>
+      </div>
+
     </div>
 
-    
-    <div class="carousel-item" style="background-image: url('images/moana.png');">
-      <div class="carousel-caption">
-        <h1>MOANA</h1>
-        <p>An epic ocean adventure.</p>
-      </div>
-    </div>
+    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
 
   </div>
 
-  <!-- BUTONAT -->
-  <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
 
-  <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+  <div id="carouselTablet" class="carousel carousel-dark slide d-none d-sm-block" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/blade_runner.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Blade Runner</h5>
+              <p class="card-text">2017</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/boss_baby.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Boss Baby</h5>
+              <p class="card-text">Season 1-2</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
-</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Day_Shift_.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Day Shift</h5>
+              <p class="card-text">Aug 17,2022</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Jack_Ryan.png"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jack Ryan</h5>
+              <p class="card-text">Season 1-4</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/mario.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Super Mario</h5>
+              <p class="card-text">2022</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/mavka.png"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Mavka</h5>
+              <p class="card-text">Mar 03,2023</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/sonic.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              
+              <h5 class="card-title">Sonik the Headgedog</h5>
+              <p class="card-text">2020</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/sonic.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sonik the Headgedog</h5>
+              <p class="card-text">2020</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
-<div id="movieCarouselCards" class="carousel slide" data-ride="carousel">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselTablet" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselTablet" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
+  <div id="carouselExampleControlsSmallScreen" class="carousel slide d-sm-none" data-ride="carousel">
   <div class="carousel-inner">
-
-    
     <div class="carousel-item active">
-      <div class="row">
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/mavka.png" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Mavka</h6>
-              <p class="text-muted small mb-0">(2023) Mar 03</p>
+        <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/Jack_Ryan.png" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Jack Ryan</h6>
-              <p class="text-muted small mb-0">Season 1-4</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/boss_baby.jpg" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Boss Baby</h6>
-              <p class="text-muted small mb-0">Season 1-2</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/bird_box.jpg" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Bird Box Barcelona</h6>
-              <p class="text-muted small mb-0">Jul 14, 2025</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/sonic.jpg" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Sonic The Hedgehog</h6>
-              <p class="text-muted small mb-0">2020</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/mario.jpg" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">The Super Mario Bros</h6>
-              <p class="text-muted small mb-0">2023</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
-
-    
     <div class="carousel-item">
-      <div class="row">
-
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="card bg-dark text-white border-0">
-            <img src="images/blade_runner.jpg" class="img-fluid">
-            <div class="card-body p-2">
-              <h6 class="card-title">Blade Runner</h6>
-              <p class="text-muted small mb-0">2017</p>
+        <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/boss_baby.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Baby Boss</h5>
+              <p class="card-text">Season 1-4</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-        </div>
-
-      </div>
     </div>
-
+    <div class="carousel-item">
+        <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/blade_runner.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Blade Runner</h5>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Day_Shift_.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Day Shift</h5>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Jack_Ryan.png"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jack Ryan</h5>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
   </div>
-
-  
-  <a class="carousel-control-prev" href="#movieCarouselCards" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-
-  <a class="carousel-control-next" href="#movieCarouselCards" role="button" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleControlsSmallScreen" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControlsSmallScreen" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
+<div id="carouselDesktop" class="carousel slide d-none d-lg-block" data-ride="carousel">
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/blade_runner.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Blade Runner</h5>
+              <p class="card-text">2017</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/boss_baby.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Boss Baby</h5>
+              <p class="card-text">Season 1-2</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Day_Shift_.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Day Shift</h5>
+              <p class="card-text">Aug 17,2022</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/Jack_Ryan.png"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jack Ryan</h5>
+              <p class="card-text">Season 1-4</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/mario.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Super Mario</h5>
+              <p class="card-text">2022</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrappers">
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/mavka.png"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Mavka</h5>
+              <p class="card-text">Mar 03,2023</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/sonic.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              
+              <h5 class="card-title">Sonik the Headgedog</h5>
+              <p class="card-text">2020</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/sonic.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sonik the Headgedog</h5>
+              <p class="card-text">2020</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="image-wrapper">
+            <img src="images/bird_box.jpg"  alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bird Box Barcelona</h5>
+              <p class="card-text">Jul 14, 2025</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselDesktop" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselDesktop" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
+
