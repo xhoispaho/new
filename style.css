@@ -1,225 +1,184 @@
 
-
 body {
-  margin: 0;
-  background-color: black;
+  background-color: #0b0b0f;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar {
-  padding: 15px 40px;
-}
-
-.navbar-brand {
-  color: #ffd700 !important;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.nav-link {
-  color: white !important;
-  margin: 0 10px;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: #ffd700 !important;
-}
 
 .profile-img {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  margin-left: 10px;
+  object-fit: cover;
 }
 
-.carousel-item {
-  height: 100vh;
+.navbar .form-control {
+  background-color: #2a2a35;
+  border: none;
+  color: #fff;
+}
+
+.navbar .form-control::placeholder {
+  color: #aaa;
+}
+
+
+#mainCarousel .carousel-item {
+  height: 500px;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
-.carousel-item::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-}
-
-.carousel-caption {
-  bottom: 40%;
-  left: 5%;
-  right: auto;
+#mainCarousel .carousel-caption {
+  bottom: 80px;
   text-align: left;
+  left: 10%;
+  right: auto;
 }
 
-.carousel-caption h1 {
-  font-size: 50px;
-  font-weight: bold;
+#mainCarousel .carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.carousel-caption p {
-  font-size: 20px;
+#mainCarousel .carousel-caption p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.movie-scroll {
+
+.most-viewed-section {
+  padding: 40px 30px;
+}
+
+.section-header {
   display: flex;
-  scroll-behavior: smooth;
-  padding: 10px 15px;
-  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.movie-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.movie-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.movie-item {
-  margin-right: 15px;
-  flex: 0 0 auto;
-}
-
-.movie-item .card {
-  background-color: #111;
-  border: none;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-.movie-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.movie-item .card:hover {
-  transform: scale(1.05);
-}
-
-.movie-item .card-body {
-  padding: 8px;
-}
-
-.movie-item .card-title {
-  font-size: 0.85rem;
-  margin-bottom: 4px;
-}
-
-.movie-item p {
-  font-size: 0.7rem;
-  color: #aaa;
+.section-title {
+  color: #fff;
+  font-weight: 700;
   margin: 0;
 }
+
+.view-all {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.view-all:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-all i {
+  margin-left: 6px;
+}
+
 
 .cards-wrappers {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: stretch;
-  padding: 10px 0;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
-.cards-wrappers .card {
-  background-color: #111;
-  color: white;
+
+.movie-card {
+  flex: 0 0 auto;
+  background-color: #1a1a22;
   border: none;
   border-radius: 12px;
   overflow: hidden;
+  color: #fff;
+  transition: transform 0.3s ease;
 }
 
-.image-wrapper {
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card .image-wrapper {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
 }
 
-.image-wrapper img {
+.movie-card .image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-.card-body {
-  padding: 10px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0,0,0,0.6);
-  border-radius: 50%;
+.movie-card .card-body {
   padding: 12px;
 }
 
+.movie-card .card-title {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.movie-card .card-text {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.movie-card .btn-primary {
+  width: 100%;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+
+
+.movie-card {
+  width: 70%;
+}
+
+
+@media (min-width: 576px) {
+  .movie-card {
+    width: calc((100% - 16px) / 2);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .movie-card {
+    width: calc((100% - 32px) / 3);
+  }
+}
+
+
 @media (min-width: 992px) {
-  #carouselTablet {
-    display: none !important;
-  }
-
-  #carouselDesktop {
-    display: block !important;
-  }
-
-  .cards-wrappers .card {
-    flex: 0 0 calc(25% - 20px);
-    max-width: 25%;
+  .movie-card {
+    width: calc((100% - 48px) / 4);
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  #carouselDesktop {
-    display: none !important;
-  }
-
-  #carouselTablet {
-    display: block !important;
-  }
-
-  .cards-wrappers .card {
-    flex: 0 0 calc(33.333% - 20px);
-    max-width: 33.333%;
+@media (min-width: 1200px) {
+  .movie-card {
+    width: calc((100% - 80px) / 5.5);
   }
 }
 
-@media (max-width: 767px) {
-  .cards-wrappers {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
 
-  .cards-wrappers .card {
-    width: 85%;
-    max-width: 320px;
-  }
-
-  #carouselDesktop {
-    display: none !important;
-  }
-
-  #carouselTablet {
-    display: none !important;
-  }
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  opacity: 0.8;
 }
 
-#carouselTablet,
-#carouselDesktop,
-#carouselExampleControlsSmallScreen {
-  margin-top: 40px;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
 }
-
-
-  
