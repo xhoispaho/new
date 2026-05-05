@@ -1,1 +1,3 @@
-Ne kete pjese kam punuar  me bootstrap cards, duke krijuar një seksion horizontal me filma.Kam përdorur card me imazh, titull dhe përshkrim të shkurtër, dhe i kam stiluar me klasa të Bootstrap dhe CSS për t’i bërë në formë scroll horizontal dhe me pamje më moderne.
+Ne kete pjese kam implementuar nje modal duke prrdorur Bootstrap per te shfaqur detajet e nje filmi. Modal-i perfshin trailerin, titullin, vleresimet, pershkrimin dhe butona veprimi.
+
+Ky funksionalitet permireson eksperiencen e perdoruesit duke mundesuar shikimin e informacionit dhe trailer-it pa u larguar nga faqja.
